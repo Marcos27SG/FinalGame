@@ -20,7 +20,7 @@ var time_left
 var win = false
 
 func _ready():
-	player = get_tree().get_first_node_in_group("player")
+	player = get_tree().get_first_node_in_group("player") 
 	if player!=null:
 		player.global_position = start.get_spawn_pos()
 	var traps = get_tree().get_nodes_in_group("traps")
@@ -33,6 +33,8 @@ func _ready():
 	
 	time_left = level_time
 	hud.set_time_label(time_left)
+
+
 	
 	timer_node = Timer.new()
 	timer_node.name = "Level Timer"

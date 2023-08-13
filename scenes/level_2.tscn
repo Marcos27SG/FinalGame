@@ -1,16 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkrfkvwqodbdg"]
+[gd_scene load_steps=14 format=3 uid="uid://bkrfkvwqodbdg"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_0ee57"]
 [ext_resource type="PackedScene" uid="uid://cwfv7xweebvi8" path="res://scenes/player.tscn" id="1_tmkdw"]
 [ext_resource type="PackedScene" uid="uid://b0w8gtjt3kke6" path="res://scenes/bg.tscn" id="2_2dddt"]
 [ext_resource type="PackedScene" uid="uid://cw1c5aws8wj4v" path="res://scenes/level_3.tscn" id="2_vj5hk"]
 [ext_resource type="PackedScene" uid="uid://b7mqov562l5sb" path="res://scenes/tile_map.tscn" id="3_aj0rw"]
-[ext_resource type="Texture2D" uid="uid://hvh7pgnnjnha" path="res://assets/textures/bg/Oruro 1.png" id="4_b6jrt"]
+[ext_resource type="Texture2D" uid="uid://dwnb6pwvjo024" path="res://assets/textures/newBg/backup-1691858645-7_0001.png" id="4_coynl"]
 [ext_resource type="PackedScene" uid="uid://v1fiyp0l185j" path="res://scenes/start.tscn" id="4_svt18"]
 [ext_resource type="PackedScene" uid="uid://cn4rpl6hgiarx" path="res://scenes/exit.tscn" id="5_2g6oh"]
 [ext_resource type="PackedScene" uid="uid://1sfpdcin4md7" path="res://scenes/ui_layer.tscn" id="5_4vtm7"]
 [ext_resource type="PackedScene" uid="uid://mwtkxlw36bis" path="res://scenes/deathzone.tscn" id="6_tdmbx"]
 [ext_resource type="PackedScene" uid="uid://bfi3wl3ecmvan" path="res://scenes/jump_pad.tscn" id="11_srtw4"]
+[ext_resource type="PackedScene" uid="uid://u5lr4t4hiesc" path="res://scenes/sullus.tscn" id="12_mouuh"]
+[ext_resource type="PackedScene" uid="uid://co8prm5waesa5" path="res://scenes/hincha.tscn" id="13_87mgx"]
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource("1_0ee57")
@@ -18,7 +20,7 @@ next_level = ExtResource("2_vj5hk")
 level_time = 60
 
 [node name="BG" parent="." instance=ExtResource("2_2dddt")]
-bg_texture = ExtResource("4_b6jrt")
+bg_texture = ExtResource("4_coynl")
 scroll_speed = 0
 
 [node name="UILayer" parent="." instance=ExtResource("5_4vtm7")]
@@ -30,7 +32,7 @@ layer_0/tile_data = PackedInt32Array(1114143, 458752, 10, 1048607, 458752, 9, 98
 position = Vector2(22, 208)
 
 [node name="Exit" parent="." instance=ExtResource("5_2g6oh")]
-position = Vector2(1580, -576)
+position = Vector2(1563, -585)
 
 [node name="Deathzone" parent="." instance=ExtResource("6_tdmbx")]
 position = Vector2(964, 359)
@@ -61,3 +63,18 @@ position = Vector2(1375, 0)
 jump_force = 1000
 
 [node name="Traps" type="Node2D" parent="."]
+
+[node name="sullu" parent="Traps" instance=ExtResource("12_mouuh")]
+position = Vector2(135, 202)
+
+[node name="sullu2" parent="Traps" instance=ExtResource("12_mouuh")]
+position = Vector2(580, -5)
+
+[node name="sullu3" parent="Traps" instance=ExtResource("12_mouuh")]
+position = Vector2(1296, -7)
+
+[node name="Saw" parent="Traps" instance=ExtResource("13_87mgx")]
+position = Vector2(305, -7)
+
+[node name="Saw2" parent="Traps" instance=ExtResource("13_87mgx")]
+position = Vector2(927, -8)

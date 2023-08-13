@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Martian Mike"
-run/main_scene="res://scenes/level.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/name="El viaje de kechala"
+run/main_scene="res://scenes/start_menu.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]

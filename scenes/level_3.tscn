@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cw1c5aws8wj4v"]
+[gd_scene load_steps=15 format=3 uid="uid://cw1c5aws8wj4v"]
 
 [ext_resource type="PackedScene" uid="uid://cwfv7xweebvi8" path="res://scenes/player.tscn" id="1_igw10"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_nyw7l"]
@@ -6,12 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://1sfpdcin4md7" path="res://scenes/ui_layer.tscn" id="3_kxsan"]
 [ext_resource type="PackedScene" uid="uid://b0w8gtjt3kke6" path="res://scenes/bg.tscn" id="3_x1lst"]
 [ext_resource type="PackedScene" uid="uid://cn4rpl6hgiarx" path="res://scenes/exit.tscn" id="4_0wfln"]
-[ext_resource type="Texture2D" uid="uid://bpjrw7xr2mu7l" path="res://assets/textures/bg/salar de uyuni5.png" id="4_5mgv8"]
+[ext_resource type="Texture2D" uid="uid://43oq86ldi6dh" path="res://assets/textures/newBg/Oruro 1.png" id="4_fqfq2"]
 [ext_resource type="PackedScene" uid="uid://v1fiyp0l185j" path="res://scenes/start.tscn" id="5_20g07"]
 [ext_resource type="PackedScene" uid="uid://mwtkxlw36bis" path="res://scenes/deathzone.tscn" id="6_mhss2"]
 [ext_resource type="PackedScene" uid="uid://bfi3wl3ecmvan" path="res://scenes/jump_pad.tscn" id="9_cdh8o"]
-[ext_resource type="PackedScene" uid="uid://biflq2qticr8f" path="res://scenes/saw.tscn" id="10_2sscj"]
-[ext_resource type="PackedScene" uid="uid://btjcl6kfnybxx" path="res://scenes/spike_ball.tscn" id="11_in11t"]
+[ext_resource type="PackedScene" uid="uid://bodgbrg07d0c1" path="res://scenes/diablo.tscn" id="10_svvud"]
+[ext_resource type="PackedScene" uid="uid://ctiloc38h8h3l" path="res://scenes/police.tscn" id="11_ba0g5"]
+[ext_resource type="PackedScene" uid="uid://coe8b78mxmkm1" path="res://scenes/mother.tscn" id="12_2oyqq"]
+[ext_resource type="PackedScene" uid="uid://co8prm5waesa5" path="res://scenes/hincha.tscn" id="13_5o0kj"]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource("1_nyw7l")
@@ -21,7 +23,7 @@ level_time = 60
 [node name="UILayer" parent="." instance=ExtResource("3_kxsan")]
 
 [node name="BG" parent="." instance=ExtResource("3_x1lst")]
-bg_texture = ExtResource("4_5mgv8")
+bg_texture = ExtResource("4_fqfq2")
 
 [node name="Exit" parent="." instance=ExtResource("4_0wfln")]
 position = Vector2(1537, -112)
@@ -43,55 +45,26 @@ jump_force = 500
 
 [node name="Traps" type="Node2D" parent="."]
 
-[node name="Saw" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(134, 173)
+[node name="Saw3" parent="Traps" instance=ExtResource("10_svvud")]
+position = Vector2(1501, 170)
 
-[node name="Saw2" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(294, 173)
+[node name="Saw2" parent="Traps" instance=ExtResource("10_svvud")]
+position = Vector2(1573, 168)
 
-[node name="Saw3" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(356, 173)
+[node name="Diablo" parent="Traps" instance=ExtResource("10_svvud")]
+position = Vector2(410, 169)
 
-[node name="Saw4" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(415, 173)
+[node name="Police" parent="Traps" instance=ExtResource("11_ba0g5")]
+position = Vector2(1050, 184)
 
-[node name="Saw5" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(1237, 173)
+[node name="Saw5" parent="Traps" instance=ExtResource("12_2oyqq")]
+position = Vector2(772, 183)
 
-[node name="Saw6" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(1299, 173)
+[node name="Saw4" parent="Traps" instance=ExtResource("13_5o0kj")]
+position = Vector2(602, 185)
 
-[node name="Saw7" parent="Traps" instance=ExtResource("10_2sscj")]
-position = Vector2(1358, 173)
-
-[node name="SpikeBall" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(818, 175)
-
-[node name="SpikeBall4" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(533, 175)
-
-[node name="SpikeBall2" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(998, 175)
-
-[node name="SpikeBall3" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(906, 131)
-
-[node name="SpikeBall5" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(1233, 111)
-
-[node name="SpikeBall6" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(1484, 116)
-
-[node name="SpikeBall7" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(1590, 72)
-rotation = 3.14159
-
-[node name="SpikeBall8" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(1488, 25)
-
-[node name="SpikeBall9" parent="Traps" instance=ExtResource("11_in11t")]
-position = Vector2(1587, -6)
-rotation = 3.14159
+[node name="Saw" parent="Traps" instance=ExtResource("13_5o0kj")]
+position = Vector2(563, 185)
 
 [node name="Player" parent="." instance=ExtResource("1_igw10")]
 position = Vector2(-3, 166)

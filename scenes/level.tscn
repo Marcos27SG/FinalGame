@@ -1,15 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdg7fn7shkoyq"]
+[gd_scene load_steps=14 format=3 uid="uid://cdg7fn7shkoyq"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_6xbof"]
 [ext_resource type="PackedScene" uid="uid://bkrfkvwqodbdg" path="res://scenes/level_2.tscn" id="2_gbfcp"]
 [ext_resource type="PackedScene" uid="uid://cwfv7xweebvi8" path="res://scenes/player.tscn" id="2_he5jd"]
 [ext_resource type="PackedScene" uid="uid://b0w8gtjt3kke6" path="res://scenes/bg.tscn" id="2_mqs0w"]
 [ext_resource type="PackedScene" uid="uid://mwtkxlw36bis" path="res://scenes/deathzone.tscn" id="4_h8gbr"]
-[ext_resource type="Texture2D" uid="uid://b2u8n8vgsvf1o" path="res://assets/textures/bg/backup-1691858645-7_0001.png" id="4_hkyk7"]
 [ext_resource type="PackedScene" uid="uid://1sfpdcin4md7" path="res://scenes/ui_layer.tscn" id="4_mr3mu"]
+[ext_resource type="Texture2D" uid="uid://cikqx22784bu1" path="res://assets/textures/newBg/salar de uyuni5.png" id="4_ufues"]
 [ext_resource type="PackedScene" uid="uid://b7mqov562l5sb" path="res://scenes/tile_map.tscn" id="7_wumgc"]
 [ext_resource type="PackedScene" uid="uid://v1fiyp0l185j" path="res://scenes/start.tscn" id="9_ccrjt"]
 [ext_resource type="PackedScene" uid="uid://cn4rpl6hgiarx" path="res://scenes/exit.tscn" id="10_4f6hh"]
+[ext_resource type="PackedScene" uid="uid://coe8b78mxmkm1" path="res://scenes/mother.tscn" id="11_irqg0"]
+[ext_resource type="PackedScene" uid="uid://ctiloc38h8h3l" path="res://scenes/police.tscn" id="12_msyxc"]
+[ext_resource type="PackedScene" uid="uid://5ghotxjrgk7d" path="res://scenes/policeRunning.tscn" id="13_d2yof"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_6xbof")
@@ -17,7 +20,7 @@ next_level = ExtResource("2_gbfcp")
 level_time = 60
 
 [node name="BG" parent="." instance=ExtResource("2_mqs0w")]
-bg_texture = ExtResource("4_hkyk7")
+bg_texture = ExtResource("4_ufues")
 
 [node name="UILayer" parent="." instance=ExtResource("4_mr3mu")]
 
@@ -38,6 +41,24 @@ position = Vector2(27, 192)
 position = Vector2(1757, 192)
 
 [node name="Player" parent="." instance=ExtResource("2_he5jd")]
-position = Vector2(241, 140)
+position = Vector2(40, 166)
+
+[node name="Mother2" parent="." instance=ExtResource("11_irqg0")]
+position = Vector2(719, 183)
+
+[node name="Saw" parent="." instance=ExtResource("12_msyxc")]
+position = Vector2(643, 183)
+
+[node name="Mother" parent="." instance=ExtResource("11_irqg0")]
+position = Vector2(237, 183)
+
+[node name="Police2" parent="." instance=ExtResource("12_msyxc")]
+position = Vector2(1173, 185)
+
+[node name="Police" parent="." instance=ExtResource("11_irqg0")]
+position = Vector2(1445, 184)
+
+[node name="SpikeBall" parent="." instance=ExtResource("13_d2yof")]
+position = Vector2(387, 184)
 
 [editable path="Deathzone"]
