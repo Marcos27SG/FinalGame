@@ -40,7 +40,7 @@ offset_right = 114.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "YOU WIN"
+text = "gANASTE"
 label_settings = SubResource("LabelSettings_gomat")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -59,6 +59,6 @@ offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_jcjb3")
-text = "OK..."
+text = "CONTINUARA..."
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

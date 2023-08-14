@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_mwvnb")
 theme_override_font_sizes/font_size = 20
-text = "START"
+text = "INICIAR"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 1
@@ -82,7 +82,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_mwvnb")
 theme_override_font_sizes/font_size = 10
-text = "QUIT"
+text = "SALIR"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
